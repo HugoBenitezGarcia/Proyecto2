@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --fondo-suave: #f4f7f6;
+    --texto-principal: #2c3e50;
+    --color-acento: #e3350d;
+    --fondo-blanco: #ffffff;
+    --sombra-suave: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+body {
+    background-color: var(--fondo-suave);
+    color: var(--texto-principal);
+    font-family: 'Segoe UI', system-ui, sans-serif;
+
+    display: flex;
+    flex-direction: column;
+}
+header {
+    background-color: var(--fondo-blanco);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--texto-principal);
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--color-acento);
+}
+
+footer {
+    margin-top: auto;
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+main section {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+article img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+@keyframes aparecer {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+article {
+    background-color: var(--fondo-suave);
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: var(--sombra-suave);
+
+    animation: aparecer 0.8s ease-out forwards;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+article:hover {
+    transform: translateY(-8px);
+}
+
+form {
+    background-color: var(--fondo-blanco);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: var(--sombra-suave);
+    max-width: 600px;
+    margin: 40px auto;
+}
+
+input[type="text"],
+input[type="mail"],
+input[type="tel"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-family: inherit;
+    transition: border-color 0.3s;
+}
+
+input:focus, select:focus, textura:focus {
+    border-color: var(--color-acento);
+    outline: none;
+}
+
+button[type="submit"] {
+    background-color: var(--color-acento);
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #c22909;
+}
