@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--El viewport se usa para ajustar el tamaño de la pantalla al dispositivo --->
+
+        <title>Inventario - PokéShop</title>
+        <meta name="description" content="Gestion de las cartas">
+        <link rel="stylesheet" href="css.css">
+
+    </head>
+    <body>
+        <header>
+            <h1>Gestor de Inventario</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="servicios.html">Nuestros servicios</a></li>
+                    <li><a href="about.html">about</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="pagina6.html">Pagina6</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section>
+                <h2>Añadir y Filtrar Cartas</h2>
+                <p>
+                    <label for="filtro-categoria">Filtrar por rareza:</label>
+                    <select id="filtro-categoria">
+                        <option value="todas">Todas</option>
+                        <option value="FullArts">Full Arts</option>
+                        <option value="legendarias">Legendarias</option>
+                        <option value="holograficas">Holograficas</option>
+                    </select>
+                </p>
+                <form id="form-nueva-carta">
+                    <input type="text" id="nombre-carta" placeholder="Nombre de la carta" required>
+                    <select id="categoria-carta" required>
+                        <option value="">Selecciona rareza...</option>
+                        <option value="FullArts">Full Art</option>
+                        <option value="legendarias">Legendarias</option>
+                        <option value="holograficas">Holograficas</option>
+                    </select>
+                    <button type="submit">Añadir Carta</button>
+                </form>
+                <section id="galeria-cartas"></section>
+            </section>
+        </main>
+        <script src="js.js"></script>
+    </body>
+</html>
