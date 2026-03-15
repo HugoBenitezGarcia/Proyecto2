@@ -18,3 +18,8 @@ formulario.addEventListener("submit", function(evento)  {
     galeria.appendChild(nuevaCarta);
     formulario.reset();
 });
+
+const btnOscuro = document.getElementById("btn-modo-oscuro");
+btnOscuro.addEventListener("click", function(){
+    document.body.classList.toggle("dark-mode");
+})
